@@ -23,4 +23,6 @@
     <string name="apply">Apply</string>
     <string name="current_password">Current password</string>
     <string name="new_password">New password</string>
+    <string name="ice_creams">Ice creams</string>
+    <string name="bevrages">Bevrages</string>
 </resources>

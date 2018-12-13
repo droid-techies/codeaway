@@ -39,6 +39,8 @@ public class LoggedInActivity extends AppCompatActivity implements NavigationVie
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ProductCategorySelectionFragment()).commit();
+
     }
 
 
