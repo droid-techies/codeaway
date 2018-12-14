@@ -39,7 +39,7 @@ public class LoggedInActivity extends AppCompatActivity implements NavigationVie
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
-        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ProductCategorySelectionFragment()).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ProductCategorySelectionFragment()).addToBackStack(null).commit();
 
     }
 
@@ -60,7 +60,7 @@ public class LoggedInActivity extends AppCompatActivity implements NavigationVie
         switch (menuItem.getItemId()){
 
             case R.id.nav_settings:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new SettingsFragment()).commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new SettingsFragment()).addToBackStack(null).commit();
                 break;
             case R.id.nav_logout:
                 mAuth.signOut();
@@ -78,10 +78,14 @@ public class LoggedInActivity extends AppCompatActivity implements NavigationVie
     }
 
     public void change_email(View view) {
-        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new EmailChangeFragment()).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new EmailChangeFragment()).addToBackStack(null).commit();
     }
 
     public void change_password(View view) {
-        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new PasswordChangeFragment()).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new PasswordChangeFragment()).addToBackStack(null).commit();
+    }
+
+    public void product_selection(View view) {
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ProductSelectionFragment()).addToBackStack(null).commit();
     }
 }

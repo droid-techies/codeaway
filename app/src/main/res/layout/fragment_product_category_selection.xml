@@ -16,6 +16,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/code_away"
+        android:onClick="product_selection"
         android:contentDescription="@string/bevrages" />
 
     <ImageButton
@@ -28,5 +29,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/code_away"
+        android:onClick="product_selection"
         android:contentDescription="@string/ice_creams" />
 </android.support.constraint.ConstraintLayout>
